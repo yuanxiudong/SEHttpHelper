@@ -54,6 +54,19 @@
 - HTTPS配置
   - 使用HttpHelper#setHttpsSSLConfig(HttpsSSLConfig conf)来实现调用者自己的HTTPS策略。
 
+例如：
+```
+  HttpRequest request = new HttpRequest("www.google.com",80);
+  request.addRequestHeaderProperty("Content-Type","text/html;charset=UTF-8");
+  request.addRequestParam("param1","123456");
+  request.addRequestFileParam("file1",file);
+  request.setRequestTimeout(10000);
+  HttpHeler httpHelper = new HttpHelper();
+  HttpSession session = httpHelper.doGet(request,null,null);
+  HttpResponse response =session.getResponse
+  ....
+```
+
 #### 响应错误码
 HttpResponse包含两套错误码，系统错误码还业务错误码，#getCode和#setResultCode。
 - 系统错误码：HTTP响应的错误码以及请求过程中出现的程序性错误码。
