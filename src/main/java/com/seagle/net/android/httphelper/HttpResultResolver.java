@@ -4,8 +4,7 @@ package com.seagle.net.android.httphelper;
  * <h1>请求解析</h1>
  * <p>将请求返回的字符串数据解析成用户数据对象。</P>
  *
- * @author : xiaosheng.peng@midea.com.cn
- * @date : 2016/4/23
+ * @author : yuanxiudong66@sina.com
  */
 public abstract class HttpResultResolver<Result> {
     /**

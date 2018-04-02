@@ -12,11 +12,9 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 
 /**
- * <h1>一句话功能说明.</h1>
- * <p>详细功能描述
+ * <h1>SST配置.</h1>
  *
- * @author : xiudong.yuan@midea.com.cn
- * @date : 2016/7/14
+ * @author : yuanxiudong66@sina.com
  */
 public abstract class HttpsSSLConfig implements HostnameVerifier {
 

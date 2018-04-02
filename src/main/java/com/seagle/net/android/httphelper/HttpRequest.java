@@ -12,8 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * <h1>HTTP请求参数</h1>
  * 封装了HTTP请求的相关配置与参数。
  *
- * @author : xiudong.yuan@midea.com.cn
- * @date : 2016/4/23
+ * @author : yuanxiudong66@sina.com
  */
 public final class HttpRequest implements Serializable {
 

@@ -42,8 +42,7 @@ import javax.net.ssl.X509TrustManager;
  * 同步调用：HttpSession.getResponse(),可以将callback置为空。
  * 异步调用：通过callback的回调得到请求的响应
  *
- * @author : xiudong.yuan@midea.com.cn
- * @date : 2016/4/23
+ * @author : yuanxiudong66@sina.com
  */
 public final class HttpHelper {
 

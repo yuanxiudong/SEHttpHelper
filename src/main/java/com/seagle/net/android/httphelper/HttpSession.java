@@ -9,11 +9,9 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
 /**
- * <h1>一句话功能说明</h1>
- * <p>详细功能描述</P>
+ * <h1>Http请求会话</h1>
  *
- * @author : xiudong.yuan@midea.com.cn
- * @date : 2016/6/27
+ * @author : yuanxiudong66@sina.com
  */
 @SuppressWarnings("unused")
 public final class HttpSession<T> {

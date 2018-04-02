@@ -5,8 +5,7 @@ package com.seagle.net.android.httphelper;
  * <h1>Http响应</h1>
  * 封装HTTP响应信息
  *
- * @author : xiudong.yuan@midea.com.cn
- * @date : 2016/4/23
+ * @author : yuanxiudong66@sina.com
  */
 public final class HttpResponse<T> {
     /**

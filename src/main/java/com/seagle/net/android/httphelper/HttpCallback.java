@@ -6,8 +6,7 @@ import android.os.Bundle;
  * HTTP请求回调.
  *
  * @param <T> 结果类型
- * @author : xiudong.yuan@midea.com.cn
- * @date : 2016/6/27
+ * @author : yuanxiudong66@sina.com
  */
 public abstract class HttpCallback<T> {
     /**
