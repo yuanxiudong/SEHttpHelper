@@ -47,7 +47,7 @@ public final class HttpSession<T> {
             return httpResponse;
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
-            HttpResponse<T> httpResponse = new HttpResponse<>(HttpResponse.ERROR_CODE_REQUEST_FAILED, e.getMessage(), null);
+            HttpResponse<T> httpResponse = new HttpResponse<T>(HttpResponse.ERROR_CODE_REQUEST_FAILED, e.getMessage(), null);
             mCompleted = true;
             return httpResponse;
         }
@@ -71,12 +71,12 @@ public final class HttpSession<T> {
             return httpResponse;
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
-            HttpResponse<T> httpResponse = new HttpResponse<>(HttpResponse.ERROR_CODE_REQUEST_FAILED, e.getMessage(), null);
+            HttpResponse<T> httpResponse = new HttpResponse<T>(HttpResponse.ERROR_CODE_REQUEST_FAILED, e.getMessage(), null);
             mCompleted = true;
             return httpResponse;
         } catch (TimeoutException e) {
             e.printStackTrace();
-            HttpResponse<T> httpResponse = new HttpResponse<>(HttpResponse.ERROR_CODE_TIME_OUT, e.getMessage(), null);
+            HttpResponse<T> httpResponse = new HttpResponse<T>(HttpResponse.ERROR_CODE_TIME_OUT, e.getMessage(), null);
             if (cancelRequest) {
                 mCompleted = true;
                 mAsyncTask.cancel(true);
