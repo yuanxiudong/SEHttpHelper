@@ -1,2 +1,4 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.seagle.net.android.httphelper"/>
+          package="com.seagle.net.android.httphelper">
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

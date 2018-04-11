@@ -19,12 +19,12 @@ public final class HttpRequest implements Serializable {
     /**
      * POST请求.
      */
-    public static final String HTTP_POST = "POST";
+    static final String HTTP_POST = "POST";
 
     /**
      * GET请求.
      */
-    public static final String HTTP_GET = "GET";
+    static final String HTTP_GET = "GET";
 
     /**
      * 服务器地址，包括端口.
@@ -217,47 +217,11 @@ public final class HttpRequest implements Serializable {
     }
 
     /**
-     * 设置用户交互
-     *
-     * @param newValue 用户交互
-     */
-    public void setAllowUserInteraction(boolean newValue) {
-        setConnectSetting(HttpSettings.ALLOW_USER_INTERACTION, Boolean.toString(newValue));
-    }
-
-    /**
-     * 设置输入
-     *
-     * @param newValue 是否可以输入
-     */
-    public void setDoInput(boolean newValue) {
-        setConnectSetting(HttpSettings.DO_INPUT, Boolean.toString(newValue));
-    }
-
-    /**
-     * 设置输出
-     *
-     * @param newValue 是否可以输出
-     */
-    public void setDoOutput(boolean newValue) {
-        setConnectSetting(HttpSettings.DO_OUTPUT, Boolean.toString(newValue));
-    }
-
-    /**
-     * 是否使用缓存
-     *
-     * @param newValue 使用缓存
-     */
-    public void setUseCaches(boolean newValue) {
-        setConnectSetting(HttpSettings.USE_CACHES, Boolean.toString(newValue));
-    }
-
-    /**
      * 设置请求方法
      *
      * @param method GET or POST
      */
-    public void setRequestMethod(String method) {
+    void setRequestMethod(String method) {
         mMethod = method;
     }
 
@@ -267,7 +231,7 @@ public final class HttpRequest implements Serializable {
      * @param timeoutMillis 超时时间
      */
     public void setRequestTimeout(int timeoutMillis) {
-        setConnectSetting(HttpSettings.REQUEST_TIME_OUT, Integer.toString(timeoutMillis));
+        setConnectSetting("requestTimeout", Integer.toString(timeoutMillis));
     }
 
     /**
@@ -276,8 +240,8 @@ public final class HttpRequest implements Serializable {
      * @return 超时时间
      */
     public int getRequestTimeout() {
-        if (mConnectSettingsMap.containsKey(HttpSettings.REQUEST_TIME_OUT)) {
-            return Integer.parseInt(mConnectSettingsMap.get(HttpSettings.REQUEST_TIME_OUT));
+        if (mConnectSettingsMap.containsKey("requestTimeout")) {
+            return Integer.parseInt(mConnectSettingsMap.get("requestTimeout"));
         }
         return 10000;
     }
@@ -307,51 +271,5 @@ public final class HttpRequest implements Serializable {
      */
     public String getRequestMethod() {
         return mMethod;
-    }
-
-    /**
-     * HTTP头部涉及的参数
-     */
-    public interface HttpHeader {
-    }
-
-    /**
-     * <h1>HTTP 请求相关参数的设置</h1>
-     *
-     * @author : xiudong.yuan@midea.com.cn
-     * @date : 2016/4/27
-     */
-    @SuppressWarnings("unused")
-    public interface HttpSettings {
-
-        /**
-         * 请求超时时间
-         */
-        String REQUEST_TIME_OUT = "RequestTimeout";
-
-        /**
-         * 允许用户交互
-         */
-        String ALLOW_USER_INTERACTION = "AllowUserInteraction";
-
-        /**
-         * 可以输入。不管是GET还是POST请求默认都是true
-         */
-        String DO_INPUT = "DoInput";
-
-        /**
-         * 可以输出。POST默认true，GET默认false
-         */
-        String DO_OUTPUT = "DoOutput";
-
-        /**
-         *
-         */
-        String IF_MODIFIED_SINCE = "IfModifiedSince";
-
-        /**
-         * 允许缓存
-         */
-        String USE_CACHES = "UseCaches";
     }
 }
